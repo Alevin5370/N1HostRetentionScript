@@ -4,7 +4,7 @@ from datetime import UTC, datetime, timedelta
 # Set connection site
 conn = http.client.HTTPSConnection("app.ninjarmm.com")
 # Get OAuth token
-payload = "grant_type=client_credentials&client_id=&client_secret=&scope=monitoring management control"
+payload = "grant_type=client_credentials&client_id=[ID]&client_secret=[Secret]&scope=monitoring management control"
 headers = { 'Content-Type': "application/x-www-form-urlencoded" }
 conn.request("POST", "/ws/oauth/token", payload, headers)
 res = conn.getresponse()
